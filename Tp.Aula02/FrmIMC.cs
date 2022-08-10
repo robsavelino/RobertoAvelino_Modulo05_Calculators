@@ -75,5 +75,21 @@ namespace Tp.Aula02
         {
             this.Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txbAltura.Clear();
+            txbPeso.Clear();
+            lblSaidaIMC.Text = String.Empty;
+            txbPeso.Focus();
+        }
+
+        private void btnVolta_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new FrmMenu();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
     }
 }

@@ -77,6 +77,7 @@ namespace Tp.Aula02
 
         private void btnEquals_Click(object sender, EventArgs e)
         {
+            txbVisor.Text.Replace(",", ".");
             DataTable Calc = new DataTable();
             var result = Calc.Compute(txbVisor.Text, "");
             txbVisor.Text = result.ToString();

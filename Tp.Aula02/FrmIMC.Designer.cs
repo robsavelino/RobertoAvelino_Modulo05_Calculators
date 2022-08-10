@@ -33,15 +33,15 @@
             this.lblAltura = new System.Windows.Forms.Label();
             this.txbPeso = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.pctbImagem1 = new System.Windows.Forms.PictureBox();
             this.lblTexto = new System.Windows.Forms.Label();
             this.lblSaidaIMC = new System.Windows.Forms.Label();
             this.txbAltura = new System.Windows.Forms.TextBox();
             this.lblKg = new System.Windows.Forms.Label();
             this.lblCm = new System.Windows.Forms.Label();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnVolta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctbImagem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,15 +79,6 @@
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(107, 31);
-            this.btnLimpar.TabIndex = 4;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // pctbImagem1
             // 
@@ -145,7 +136,6 @@
             this.lblCm.TabIndex = 11;
             this.lblCm.Text = "cm";
             // 
-            // 
             // btnSair
             // 
             this.btnSair.Location = new System.Drawing.Point(457, 396);
@@ -156,6 +146,26 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(457, 230);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(107, 31);
+            this.btnClear.TabIndex = 15;
+            this.btnClear.Text = "Limpar";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnVolta
+            // 
+            this.btnVolta.Location = new System.Drawing.Point(309, 396);
+            this.btnVolta.Name = "btnVolta";
+            this.btnVolta.Size = new System.Drawing.Size(107, 31);
+            this.btnVolta.TabIndex = 16;
+            this.btnVolta.Text = "Voltar";
+            this.btnVolta.UseVisualStyleBackColor = true;
+            this.btnVolta.Click += new System.EventHandler(this.btnVolta_Click);
+            // 
             // FrmIMC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -163,20 +173,21 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(880, 483);
+            this.Controls.Add(this.btnVolta);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lblCm);
             this.Controls.Add(this.lblKg);
             this.Controls.Add(this.txbAltura);
             this.Controls.Add(this.lblSaidaIMC);
             this.Controls.Add(this.lblTexto);
             this.Controls.Add(this.pctbImagem1);
-            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.txbPeso);
             this.Controls.Add(this.lblAltura);
             this.Controls.Add(this.lblPeso);
             this.MaximizeBox = false;
+            this.Name = "FrmIMC";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmIMC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctbImagem1)).EndInit();
@@ -191,14 +202,14 @@
         private Label lblAltura;
         private TextBox txbPeso;
         private Button btnCalcular;
-        private Button btnLimpar;
         private PictureBox pctbImagem1;
         private Label lblTexto;
         private Label lblSaidaIMC;
         private TextBox txbAltura;
         private Label lblKg;
         private Label lblCm;
-        private Button btnVoltar;
         private Button btnSair;
+        private Button btnClear;
+        private Button btnVolta;
     }
 }
