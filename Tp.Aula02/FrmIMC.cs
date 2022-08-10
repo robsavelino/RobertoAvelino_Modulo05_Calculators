@@ -57,5 +57,23 @@ namespace Tp.Aula02
             lblSaidaIMC.Text = String.Empty;
             txbPeso.Focus();
         }
+
+        private void pctbImagem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new FrmMenu();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

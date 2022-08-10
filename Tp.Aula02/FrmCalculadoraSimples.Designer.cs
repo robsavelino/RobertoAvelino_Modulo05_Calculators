@@ -46,6 +46,8 @@
             this.btnNum0 = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.txbVisor = new System.Windows.Forms.TextBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCalc
@@ -227,12 +229,34 @@
             this.txbVisor.TabIndex = 17;
             this.txbVisor.TextChanged += new System.EventHandler(this.txbVisor_TextChanged);
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(250, 388);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(103, 23);
+            this.btnVoltar.TabIndex = 18;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(448, 388);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(103, 23);
+            this.btnSair.TabIndex = 19;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // FrmCalculadoraSimples
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txbVisor);
             this.Controls.Add(this.btnDivision);
             this.Controls.Add(this.btnEquals);
@@ -279,5 +303,7 @@
         private Button btnNum0;
         private Button btnClear;
         private TextBox txbVisor;
+        private Button btnVoltar;
+        private Button btnSair;
     }
 }

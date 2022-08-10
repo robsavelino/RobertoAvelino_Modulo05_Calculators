@@ -40,6 +40,8 @@
             this.txbAltura = new System.Windows.Forms.TextBox();
             this.lblKg = new System.Windows.Forms.Label();
             this.lblCm = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctbImagem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +72,7 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(309, 261);
+            this.btnCalcular.Location = new System.Drawing.Point(309, 230);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(107, 31);
             this.btnCalcular.TabIndex = 3;
@@ -80,7 +82,6 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(457, 261);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(107, 31);
             this.btnLimpar.TabIndex = 4;
@@ -97,6 +98,7 @@
             this.pctbImagem1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctbImagem1.TabIndex = 6;
             this.pctbImagem1.TabStop = false;
+            this.pctbImagem1.Click += new System.EventHandler(this.pctbImagem1_Click);
             // 
             // lblTexto
             // 
@@ -114,7 +116,6 @@
             this.lblSaidaIMC.AutoSize = true;
             this.lblSaidaIMC.Location = new System.Drawing.Point(261, 343);
             this.lblSaidaIMC.Name = "lblSaidaIMC";
-            this.lblSaidaIMC.Size = new System.Drawing.Size(101, 15);
             this.lblSaidaIMC.TabIndex = 8;
             this.lblSaidaIMC.Text = "Resultado do IMC";
             // 
@@ -144,13 +145,26 @@
             this.lblCm.TabIndex = 11;
             this.lblCm.Text = "cm";
             // 
-            // frmIMC
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(457, 396);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(107, 31);
+            this.btnSair.TabIndex = 13;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // FrmIMC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(880, 483);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lblCm);
             this.Controls.Add(this.lblKg);
             this.Controls.Add(this.txbAltura);
@@ -163,7 +177,6 @@
             this.Controls.Add(this.lblAltura);
             this.Controls.Add(this.lblPeso);
             this.MaximizeBox = false;
-            this.Name = "frmIMC";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmIMC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctbImagem1)).EndInit();
@@ -185,5 +198,7 @@
         private TextBox txbAltura;
         private Label lblKg;
         private Label lblCm;
+        private Button btnVoltar;
+        private Button btnSair;
     }
 }
